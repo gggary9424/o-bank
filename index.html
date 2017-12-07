@@ -16,7 +16,7 @@
       const isTest = Boolean(getLocationParameter('t'))
       const url = isTest ? 'https://wa-li-shit-bot-staging.herokuapp.com/e' : 'https://wa-li-shit-bot.herokuapp.com/e'
       const xhttp = new XMLHttpRequest()
-      xhttp.onreadystatechange = () => {
+      xhttp.onload = () => {
           window.location.replace(redirectUrl)
       }
       xhttp.open('GET', `${url}?e=${e}`, true)
